@@ -26,15 +26,20 @@ export default class FilterObject extends Component {
               filteredEmployees: []
             }
         }
+        handleChange(value){
+            this.setState({userInput: value})
+        }
         filterEmployees(prop){
             let employees = this.state.employees
             let filteredEmployees= [];
             //return employees.filter(this.state.userInput)
-            for(i=0;i<employees.length; i++){
+            for(let i=0;i<employees.length; i++){
                 if(employees[i].hasOwnProperty(prop)){
                     filteredEmployees.push(employees[i])
+                    console.log(employees[i])
                 }
             }
+            this.setState({filteredEmployees: filteredEmployees})
         }
     render(){
         return(
