@@ -36,7 +36,7 @@ export default class FilterObject extends Component {
             for(let i=0;i<employees.length; i++){
                 if(employees[i].hasOwnProperty(prop)){
                     filteredEmployees.push(employees[i])
-                    console.log(employees[i])
+                    //console.log(employees[i])
                 }
             }
             this.setState({filteredEmployees: filteredEmployees})
